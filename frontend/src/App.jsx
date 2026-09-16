@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import axios from 'axios'
 
-const API = 'http://localhost:8080/api/employees'
+const API = 'https://employee-management-system-eu53.onrender.com/api/employees'
 
 const emptyForm = { name: '', email: '', department: 'IT', salary: '' }
 
