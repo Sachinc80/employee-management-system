@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: #0b1020;
+  color: #eef2ff;
+}
+.app { min-height: 100vh; }
+header {
+  padding: 48px max(20px, calc((100% - 1180px)/2));
+  display:flex; justify-content:space-between; gap:20px; align-items:center;
+  background: radial-gradient(circle at 80% 20%, #27356d 0, #111936 35%, #0b1020 70%);
+}
+.brand { color:#7dd3fc; font-weight:800; letter-spacing:2px; }
+h1 { margin:10px 0 6px; font-size:clamp(28px,5vw,48px); }
+header p { margin:0; color:#aeb8d4; }
+.badge { padding:10px 14px; border:1px solid #3b82f6; border-radius:999px; color:#bfdbfe; white-space:nowrap; }
+main { max-width:1180px; margin:auto; padding:28px 20px 60px; }
+.card {
+  background:#121a30; border:1px solid #263454; border-radius:18px;
+  box-shadow:0 16px 40px rgba(0,0,0,.22);
+}
+.form-card { padding:24px; }
+h2 { margin-top:0; }
+form { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+input, select {
+  width:100%; padding:13px 14px; border-radius:10px;
+  border:1px solid #33415f; background:#0c1326; color:#fff; outline:none;
+}
+input:focus, select:focus { border-color:#60a5fa; }
+button {
+  border:0; border-radius:10px; padding:12px 15px; cursor:pointer;
+  background:#2563eb; color:#fff; font-weight:700;
+}
+button:hover { filter:brightness(1.12); }
+.secondary { background:#475569; }
+.toolbar {
+  display:flex; justify-content:space-between; align-items:center;
+  gap:15px; margin:24px 0 12px;
+}
+.search { max-width:420px; }
+.table-card { padding:10px; overflow:hidden; }
+.table-wrap { overflow:auto; }
+table { width:100%; border-collapse:collapse; min-width:800px; }
+th, td { padding:15px 14px; text-align:left; border-bottom:1px solid #263454; }
+th { color:#93a4c8; font-size:13px; text-transform:uppercase; letter-spacing:.6px; }
+.dept { padding:6px 10px; background:#172554; color:#bfdbfe; border-radius:999px; font-size:12px; }
+.actions { display:flex; gap:8px; }
+.actions button { padding:8px 11px; }
+.danger { background:#b91c1c; }
+footer { text-align:center; padding:22px; color:#7f8dab; border-top:1px solid #202b47; }
+@media (max-width:800px) {
+  header { flex-direction:column; align-items:flex-start; }
+  form { grid-template-columns:1fr 1fr; }
+  .toolbar { flex-direction:column; align-items:stretch; }
+  .search { max-width:none; }
+}
+@media (max-width:520px) { form { grid-template-columns:1fr; } }
