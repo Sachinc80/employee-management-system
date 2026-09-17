@@ -13,6 +13,7 @@ import java.util.List;
 @CrossOrigin(origins = {
     "http://localhost:5173",
     "http://localhost:5174",
+    "http://localhost:5175",
     "https://employee-management-system-1-x1xv.onrender.com"
 })
 public class EmployeeController {
