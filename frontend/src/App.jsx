@@ -38,8 +38,11 @@ export default function App() {
     e.preventDefault()
     try {
       const payload = { ...form, salary: Number(form.salary) }
-      if (editingId) await axios.put(`${API}/${editingId}`, payload)
-      else await axios.post(API, payload)
+if (editingId !== null) {
+  await axios.put(`${API}/${editingId}`, payload)
+} else {
+  await axios.post(API, payload)
+}
       setForm(emptyForm)
       setEditingId(null)
       loadEmployees()
